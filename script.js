@@ -6,4 +6,5 @@ document.getElementById("nav01").innerHTML =
 "<li><a href='index.html'>Home</a></li>" +
 "<li><a href='customers.html'>Data</a></li>" +
 "<li><a href='about.html'>About</a></li>" +
+"<li><a href='about.html'>Mobile</a></li>" +
 "</ul>";
