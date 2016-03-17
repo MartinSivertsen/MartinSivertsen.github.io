@@ -26,7 +26,7 @@ We wanted the cars to be a bit more fun, so we decided to add:
 - Simple sound using a [piezoelectric speaker] (https://en.wikipedia.org/wiki/Piezoelectric_speaker) 
 - RGB LEDs to provide lights beside the IR recievers to indicate hits and other things, 
 - A [laser diode] (https://www.adafruit.com/products/1054) to work as a sight for the IR transmitter.
-- 
+
 ##Firmware
 
 ##Software
