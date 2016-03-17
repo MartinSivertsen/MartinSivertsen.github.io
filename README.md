@@ -1,8 +1,8 @@
 #**Physical Web Toy**
 ##**Bluetooth Smart Controlled Car**
 
-This project is a bachelor thesis done by four students of electrical engineering at The Norwegian University of Science of Technology.
-The project utilizes the [nRF52 Development Kit] (http://no.mouser.com/new/nordicsemiconductor/nordic-nrf52-dk/) (DK for short) from [Nordic Semiconductor] (http://www.nordicsemi.com/), which is aversatile single-board development kit for Bluetooth® Smart, ANT, and 2.4GHz proprietary applications. It is hardware-compatible with the Arduino Uno Revision 3 standard, so it  enables the use of 3rd-party shields that conform to this standard.
+This project is a bachelor thesis done by four students of electrical engineering at [The Norwegian University of Science of Technology] (http://www.ntnu.edu/).
+The project utilizes the [nRF52 Development Kit] (http://no.mouser.com/new/nordicsemiconductor/nordic-nrf52-dk/) (DK for short) from [Nordic Semiconductor] (http://www.nordicsemi.com/), which is a versatile single-board development kit for Bluetooth® Smart, ANT, and 2.4GHz proprietary applications. It is hardware-compatible with the Arduino Uno Revision 3 standard, so it  enables the use of 3rd-party shields that conform to this standard.
 
 The thesis itself is scheduled to be delivered may 25th 2016, so the publication of this project is a snapshot of the functionality to coincide with the release of [The Physical Web] (https://google.github.io/physical-web/). Although the project is not fully realized at the time of publication, most of the functonality is in place, which we'll explain further down in the text.
 
