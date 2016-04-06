@@ -4,11 +4,11 @@
 This project is a bachelor thesis done by four students of electrical engineering at [The Norwegian University of Science of Technology] (http://www.ntnu.edu/).
 The project utilizes the [nRF52 Development Kit] (http://no.mouser.com/new/nordicsemiconductor/nordic-nrf52-dk/) (DK for short) from [Nordic Semiconductor] (http://www.nordicsemi.com/), which is a versatile single-board development kit for Bluetooth® Smart, ANT, and 2.4GHz proprietary applications. It is hardware-compatible with the Arduino Uno Revision 3 standard, so it  enables the use of 3rd-party shields that conform to this standard.
 
-The thesis itself is scheduled to be delivered may 25th 2016, so the publication of this project is a snapshot of the functionality to coincide with the release of [The Physical Web] (https://google.github.io/physical-web/). Although the project is not fully realized at the time of publication, most of the functonality is in place, which we'll explain further down in the text.
+The thesis itself is scheduled to be delivered may 25th 2016, so the publication of this project is a snapshot of the functionality to coincide with the release of [The Physical Web] (https://google.github.io/physical-web/). Although the project is not fully completed, the main functonality is in place, and we are only missing simple lights and sound.
 
-Our goal was to make several Bluetooth Smart controlled cars that can play a game of laser tag against each other as well as receive random power ups by driving over RFID tags. It is the latter functionality which is not fully realized as we had not recieved RFID trancievers at the time of publication, although the power up function itself is realized in both firmware and software, we have to use an alternative way to trigger it.
+Our goal was to make several Bluetooth Smart controlled cars that can play a game of laser tag against each other as well as receive random power ups by driving over RFID tags.
 
-The cars are built using a prefabricated kit designed for Arduino and other micro controllers. We have also planned to make a body that goes over the cars using vacuum forming, and 3D-printing parts to attach the bits and bobs to the cars.
+The cars are built using a prefabricated kit designed for Arduino and other micro controllers. We are also in the process of making a body that goes over the cars using vacuum forming, and 3D-printing parts to attach various peripherals to the cars.
 
 Below we will go through the different parts - hardware, firmware and software - in further detail.
 
