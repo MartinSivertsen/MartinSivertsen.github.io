@@ -13,7 +13,7 @@ The cars are built using a prefabricated kit designed for Arduino and other micr
 Below we will go through the different parts - hardware, firmware and software - in further detail.
 
 ##Hardware
-###nRF52 Development Kit
+####nRF52 Development Kit
 As mentioned in the introduction, our project is built around the nRF52 Development Kit (DK) from Nordic Semiconductor. It functions as both a Bluetooth® Smart beacon using Eddystone, and as a [microcontroller] (https://en.wikipedia.org/wiki/Microcontroller).
 ###4WD "Robot" Car
 The car chassis is a [prefabricated kit] (http://www.banggood.com/4WD-Smart-Robot-Car-Chassis-Kits-With-Strong-Magneto-Speed-Encoder-p-917007.html) consisting of two identical acrylic sheets stacked on top of each other, four DC-motors - one for each wheel - placed between the acrylic sheets and four wheels. The cars were chosen primarily because they were a good platform to experiment and prototype with, but also because we felt it very important to have a small as possible turning radius. The latter we achieved by driving the cars like a tank, where the wheels turn in parallell, making the car capable of spinning around itself.
