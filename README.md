@@ -2,9 +2,9 @@
 ##**Bluetooth Smart Controlled Car**
 
 This project is a bachelor thesis done by four students of electrical engineering at [The Norwegian University of Science of Technology] (http://www.ntnu.edu/).
-The project utilizes the [nRF52 Development Kit] (http://no.mouser.com/new/nordicsemiconductor/nordic-nrf52-dk/) (DK for short) from [Nordic Semiconductor] (http://www.nordicsemi.com/), which is a versatile single-board development kit for Bluetooth® Smart, ANT, and 2.4GHz proprietary applications. It is hardware-compatible with the Arduino Uno Revision 3 standard, so it  enables the use of 3rd-party shields that conform to this standard.
+The project utilizes the [nRF52 Development Kit] (http://no.mouser.com/new/nordicsemiconductor/nordic-nrf52-dk/) (DK for short) from [Nordic Semiconductor] (http://www.nordicsemi.com/), which is a versatile single-board development kit for Bluetooth® Smart, ANT and 2.4GHz proprietary applications. It is hardware-compatible with the Arduino Uno Revision 3 standard, so it  enables the use of 3rd-party shields that conform to this standard.
 
-The thesis itself is scheduled to be delivered may 25th 2016, so the publication of this project is a snapshot of the functionality to coincide with the release of [The Physical Web] (https://google.github.io/physical-web/). Although the project is not fully completed, the main functonality is in place, and we are only missing simple lights and sound.
+The thesis itself is scheduled to be delivered May 25th 2016, so the publication of this project is a snapshot of the functionality to coincide with the release of [The Physical Web] (https://google.github.io/physical-web/). Although the project is not fully completed, the main functonality is in place, and we are only missing simple lights and sound.
 
 Our goal was to make several Bluetooth Smart controlled cars that can play a game of laser tag against each other as well as receive random power ups by driving over RFID tags.
 
@@ -20,7 +20,7 @@ The car chassis is a [prefabricated kit] (http://www.banggood.com/4WD-Smart-Robo
 ###Motor Shield
 To be able to control the voltage that goes to the DC-motors in a good way we decided to get a motorshield that stacks on top of the development kit. The motorshield we use is produced by [Adafruit] (https://www.adafruit.com/products/1438), and is capable of driving 2 hobby servos and 4 DC motors or 2 stepper motors. Since the shield is produced for Arduino and the firmware to drive it doesn't exist for the nRF52 DK, we had to use a [logic analyzer] (https://www.saleae.com/) to decipher the data being sent from the Arduino code to the motorshield, and reconstruct it in the firmware for our DK, to produce our own [I²C/TWI] (https://en.wikipedia.org/wiki/I%C2%B2C) driver. So now other people wanting to use the Adafruit motorshield with the nRF52 development kit can use our code.
 ###NFC/RFID Controller Shield
-To be able to read RFID-tags and realize our power up funtionality we decided to use [Adafruits NFC/RFID Controller Shield] (https://www.adafruit.com/products/789). We chose this because the shield uses the I²C communication protocol as a default, is compatible with Arduino (thus compatible with our DK) and Adafruit has very good documentation of their products.
+To be able to read RFID-tags and realize our power up functionality we decided to use [Adafruits NFC/RFID Controller Shield] (https://www.adafruit.com/products/789). We chose this because the shield uses the I²C communication protocol as default, is compatible with Arduino (thus compatible with our DK) and Adafruit has very good documentation of their products.
 ###Infrared transmitters and recievers
 The laser tag functionality is realized using [IR transmitters and recievers] (http://www.dx.com/p/mini-38khz-infrared-transmitter-ir-emitter-module-infrared-receiver-sensor-module-for-arduino-327293#.VuqPR_krKhc). We use transmitters and recievers prefabricated on tiny PCBs with three pins: ground (GND), positive supply voltage (VCC), and signal (SIG). They are rated to run on 3.3 - 5.5 volts, so they are pretty much "plug and play".
 ###"Bells & Whistles"
@@ -57,7 +57,7 @@ There is no other trick to it!
 
 ###RGB-LEDs and PWM.
 
-In order to get more feedback from the game, we added some lights to our project. The DK communicates to these devices with a changing PWM-signal, and you guessed it, this is powered by Nordic Semiconductors app_pwm-library. It should be noted that we've added quite a lot upon this library to make it possible to not collide with our other timers, pins and Bluetooth-functionality. 
+In order to get more feedback from the game, we added some lights to our project. The DK communicates to these devices with a changing PWM-signal, and you guessed it, this is powered by Nordic Semiconductors app_pwm-library. It should be noted that we've added quite a lot to this library to make it possible to not collide with our other timers, pins and Bluetooth-functionality. 
 
 Right now you can call a simple function, set_rgb_color, to change the light to a set of predefined values. There is also room for defining further values.
 
