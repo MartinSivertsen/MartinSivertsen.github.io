@@ -35,7 +35,8 @@ The very heart in our DK, powered by [Eddystone] (https://en.wikipedia.org/wiki/
 
 ###Software Development Kit
 
-Our project is based on Nordic Semiconductors Software Development Kit 11, and is a heavily modified version of ble_app_blinky and it's ble_lbs-service. The bluetooth service itself is greatly modified for our use, and consists of two characteristics; one used for read/write - used mainly by the software -, and one for notifications to the web from the firmware itself. Both characteristics consists of 20 bytes, and they both have several bytes which are not in use by the project at this moment. This makes our project flexible for further development.
+Our project is based on Nordic Semiconductors Software Development Kit 11, and is a heavily modified version of ble_app_blinky and it's ble_lbs-service. The bluetooth service itself is greatly modified for our use, and consists of two characteristics; one used for read/write - used mainly by the software -, and one for notifications to the web from the firmware itself. 
+Both characteristics consists of 20 bytes, and they both have several bytes which are not in use by the project at this moment. This makes our project flexible for further development.
 
 ###TWI Motor- and RFID-driver
 
@@ -51,9 +52,9 @@ Our DK has the ability to receive and send infrared signals, which is the staple
 
 There is no other trick to it!
 
-###"Lights, camera, action!" and RGB-LEDs.
+###RGB-LEDs and PWM.
 
-In order to get more feedback from the game, we added some sound and lights to our project. The DK communicates to these devices with a changing PWM-signal, and you guessed it, this is powered by Nordic Semiconductors app_pwm-library. It should be noted that we've added quite a lot upon this library to make it possible to not collide with our other timers, pins and Bluetooth-functionality. 
+In order to get more feedback from the game, we added some lights to our project. The DK communicates to these devices with a changing PWM-signal, and you guessed it, this is powered by Nordic Semiconductors app_pwm-library. It should be noted that we've added quite a lot upon this library to make it possible to not collide with our other timers, pins and Bluetooth-functionality. 
 
 Right now you can call a simple function, set_rgb_color, to change the light to a set of predefined values. There is also room for defining further values.
 
