@@ -37,7 +37,7 @@ The very heart in our DK, powered by [Eddystone] (https://en.wikipedia.org/wiki/
 
 ###Software Development Kit
 
-Our project is based on Nordic Semiconductors Software Development Kit 11, and is a heavily modified version of ble_app_blinky and it's ble_lbs-service. The bluetooth service itself is greatly modified for our use, and consists of two characteristics; one used for read/write - used mainly by the software -, and one for notifications to the web from the firmware itself. 
+Our project is based on Nordic Semiconductors Software Development Kit 11, and is a heavily modified version of ble_app_blinky and its bluetooth service "ble_lbs-service". The bluetooth service itself is greatly modified for our use, and consists of two characteristics; one used for read/write - used mainly by the software -, and one for notifications to the web from the firmware itself. 
 
 Both characteristics consists of 20 bytes, and they both have several bytes which are not in use by the project at this moment. This makes our project flexible for further development.
 
