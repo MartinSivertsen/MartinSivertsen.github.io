@@ -36,7 +36,7 @@ The very hearth in our DK, powered by [Eddystone] (https://en.wikipedia.org/wiki
 
 In order for our DK to connect and communicate with our [motor] (https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/overview)- and [RFID] (https://www.adafruit.com/products/789)-shields, we had to create designated drivers. These drivers were created purely on analyzing the logic on their first-party drivers made for Arduino, and although their design might be vastly different, our drivers work as intended. These drivers are made completely independent of our project, and can be used as libraries for other projects which utilizes these shields.
 
-Note that the motordriver will always set new values for every motor, and currently there is no way of setting a motor value independently. Therefore, if there is a need to change only one motorvalue, you have to make certain that the old motorvalues is also defined.
+Note that the motordriver will always set new values for every motor, and currently there is no way of setting a motor value independently. Therefore, if there is a need to change only one motor value, you have to make certain that the old motor values is also defined.
 
 Currently the RFID-driver does not have the option to read a RFID-tag or write to it; as this is not needed for our project. Our RFID-driver is designed to only notify the DK when a nearby tag is in the area.
 
