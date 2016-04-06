@@ -8,13 +8,13 @@ The thesis itself is scheduled to be delivered may 25th 2016, so the publication
 
 Our goal was to make several Bluetooth Smart controlled cars that can play a game of laser tag against each other as well as receive random power ups by driving over RFID tags.
 
-The cars are built using a prefabricated kit designed for Arduino and other micro controllers. We are also in the process of making a body that goes over the cars using vacuum forming, and 3D-printing parts to attach various peripherals to the cars.
+The cars are built using a prefabricated kit designed for Arduino and other microcontrollers. We are also in the process of making a body that goes over the cars using vacuum forming, and 3D-printing parts to attach various peripherals to the cars.
 
 Below we will go through the different parts - hardware, firmware and software - in further detail.
 
 ##Hardware
 ###nRF52 Development Kit
-As mentioned in the introduction, our project is built around the nRF52 Development Kit (DK) from Nordic Semiconductor. It functions as both a Bluetooth® Smart beacon using Eddystone, and as a micro controller.
+As mentioned in the introduction, our project is built around the nRF52 Development Kit (DK) from Nordic Semiconductor. It functions as both a Bluetooth® Smart beacon using Eddystone, and as a [microcontroller] (https://en.wikipedia.org/wiki/Microcontroller).
 ###4WD "Robot" Car
 The car chassis is a [prefabricated kit] (http://www.banggood.com/4WD-Smart-Robot-Car-Chassis-Kits-With-Strong-Magneto-Speed-Encoder-p-917007.html) consisting of two identical acrylic sheets stacked on top of each other, four DC-motors - one for each wheel - placed between the acrylic sheets and four wheels. The cars were chosen primarily because they were a good platform to experiment and prototype with, but also because we felt it very important to have a small as possible turning radius. The latter we achieved by driving the cars like a tank, where the wheels turn in parallell, making the car capable of spinning around itself.
 ###Motor Shield
