@@ -60,7 +60,7 @@ For interaction between decvices we implement [Web Bluetooth API] (https://webbl
 ##The Game of Cars
 The vehicles are equipped with different functions as part of the game. We use the IR-transmitters and receivers to simulate hits. The players have a certain amount of lifes and loses one when hit. 
 
-The players can gain life by activating the power up slot, by swiping the RFID-card, when running the car over a power up module. In addition the slot gives three other power ups: shield, rapid fire and speed up only for a certain amount of time. When the vehicle uses shield it avoids hits. With rapid fire the player are able to shoot three times faster than default shooting speed. When speeded up the cars pace increases to full speed. 
+The players can gain life by activating the power up slot, by swiping the RFID-card, when running the car over a power up module. In addition the slot gives three other power ups: shield, rapid fire and speed up only for a certain amount of time. When the vehicle uses shield it avoids hits. With rapid fire the player are able to shoot three times faster than default shooting pace. When speeded up the cars pace increases to full speed. 
 
 The RBG-leds signals different actions in the game. Green is a sort of default light that indicates that nothing in particular is happening, the car can also be hit when green. The led changes to red when the car is hit. When red the car gets a power boost it can not be hit again until it's green. The blue led indicates shooting. When activating the power up slot the led turns into a disco ball until power up is gained. When the led turns purple the car have gained rapid fire. A yellow led indicates a shielded car. 
 
