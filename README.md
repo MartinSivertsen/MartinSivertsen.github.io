@@ -55,13 +55,25 @@ Our DK has the ability to receive and send infrared signals, which is the staple
 
 There is no other trick to it!
 
-###RGB-LEDs and PWM.
+###RGB-LEDs and PWM
 
 In order to get more feedback from the game, we added some lights to our project. The DK communicates to these devices with a changing PWM-signal, and you guessed it, this is powered by Nordic Semiconductors app_pwm-library. It should be noted that we've added quite a lot to this library to make it possible to not collide with our other timers, pins and Bluetooth-functionality. 
 
 Right now you can call a simple function, set_rgb_color, to change the light to a set of predefined values. There is also room for defining further values.
 
 ##Software
+
+###Web Bluetooth
+
+For interaction between decvices we implement Web Bluetooth API (https://webbluetoothcg.github.io/web-bluetooth/#introduction). It discovers and communicates with devices over Bluetooth, a wireless standard using GATT (Generic Attribute Profile).
+
+###The Car
+
+
+
+
+
+
 
 
 
