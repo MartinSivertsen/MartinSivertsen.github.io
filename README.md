@@ -62,7 +62,7 @@ The vehicles are equipped with different functions as part of the game. We use t
 
 The players can gain life by activating the power up slot, by swiping the RFID-card, when running the car over a power up module. In addition the slot gives three other power ups: shield, rapid fire and speed up only for a certain amount of time. When the vehicle uses shield it avoids hits. With rapid fire the player are able to shoot three times faster than default shooting pace. When speeded up the cars pace increases to full speed. 
 
-The RBG leds signals different actions in the game. Green is a sort of default light that indicates that nothing in particular is happening, the car can also be hit when green. The led changes to red when the car is hit. When red the car gets a power boost it can not be hit again until it's green. The blue led indicates shooting. When activating the power up slot the led turns into a disco ball until power up is gained. When the led turns purple the car have gained rapid fire. A yellow led indicates a shielded car. 
+The RBG leds signals different actions in the game. Green is a sort of default light that indicates that nothing in particular is happening, the car can also be hit when green. The led changes to red when the car is hit. When red the car gets a power boost and it can not be hit again until it's green. The blue led indicates shooting. When activating the power up slot the led turns into a disco ball until power up is gained. When the led turns purple the car have gained rapid fire. A yellow led indicates a shielded car. 
 
 We've added sound to make the game audible with the piezoelectric speaker. It will make a sound when shooting, getting hit, winning and losing. 
 
