@@ -1,4 +1,4 @@
-#**Physical Web Toy**
+#**Physical Web RC Car**
 ##**Bluetooth Smart Controlled Car**
 
 This project is a bachelor thesis done by four students of electrical engineering at [The Norwegian University of Science of Technology] (http://www.ntnu.edu/).
