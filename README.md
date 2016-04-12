@@ -57,31 +57,15 @@ Right now you can call a simple function, set_rgb_color, to change the light to 
 ###Web Bluetooth
 The broadcasted Eddystone URL by the Development Kit directs the user to a website that can connect the device to the car using [Web Bluetooth API] (https://webbluetoothcg.github.io/web-bluetooth/#introduction). This means that any device with a Web Bluetooth enabled browser is able to connect to and control the car. The part of the JavaScript that takes care of the connection with the Development Kit can be found in js/ble.js. 
 
-We have chosen to use a modified version of the LED Button Service included in the nRF52 SDK 11 as our GATT service in this project, and the website will only show devices broadcasting this particular service when a user tries to connect to the car via the website. This can easily be changed by replacing the UUIDs for your custom service and characteristic UUIDs in ble.js. 
+We have chosen to use a modified version of the LED Button Service included in the nRF52 SDK 11 as our GATT service in this project, and the website will only show devices advertising this particular service when a user tries to connect to the car via the website. This can easily be changed by replacing the UUIDs for your custom service and characteristic UUIDs in ble.js. 
 
-Please keep in mind that we have made these controllers for the car and the game as a demonstration of the potential in the new nRF52 Development Kit. Our background is from the hardware side of things, and the JavaScript is probably far from perfect. Feedback and tips for improvements to the JavaScript are very welcome. We have learned a lot from working with this, and it would be great to learn even more from more experienced people.
+Please keep in mind that we have made these controllers for the car and the game as a demonstration of the potential in the new nRF52 Development Kit. Our background is from the hardware side of things, and the JavaScript is far from perfect. Feedback and tips for improvements to the JavaScript are very welcome. We have learned a lot from working with this, and it would be great to learn even more from more experienced people.
 
 ##The Game of Cars
 As part of this demo, we have made a version of laser tag for multiple players. In the game menu there's an option to create a multiplayer game that others can join. When a game session is created, a game PIN is shown on the creator's device and others may enter this on their own device to be included in the same session and play against each other. (To keep track of the game status, the browser will make an AJAX request to a php file at a given interval set in the updateInterval property of the game object in game.js file. This is a solution made for testing purposes, and is probably not a very good one)
 
-The controllers on the website include a joystick to control the car's movements and a button to 'shoot' at the other cars. The vehicles are equipped with IR-transmitters and receivers to simulate hits. The players have a certain amount of lives and loses one when hit. 
+The controllers on the website include a joystick to control the car's movements and a button to 'shoot' at the other cars. The vehicles are equipped with IR-transmitters and receivers to simulate hits. The players have a certain amount of lives and loses one when hit. The car is also equipped with a laser used to aim on other vehicles to make the shooting part of the game more complete.
 
-The players can gain life when driving the car over a power up module. In addition the slot gives three other power ups: shield, rapid fire and speed up only for a certain amount of time. When the vehicle uses shield it's protected against hits. With rapid fire the player is able to shoot three times faster than default shooting speed. When speeded up the car's speed increases by approximately 25%. 
+The players can gain life when driving the car over a power up plate. In addition the slot gives three other power ups: shield, rapid fire and speed up only for a certain amount of time. When the vehicle uses shield it's protected against hits. With rapid fire the player is able to shoot three times faster than default shooting speed. When speeded up the car's speed increases by approximately 25%. 
 
-The RBG leds signals different actions in the game. Green is a sort of default light that indicates that nothing in particular is happening, the car can also be hit when green. The led changes to red when the car is hit. When red the car gets a power boost it can not be hit again until it's green. The blue led indicates shooting. When activating the power up slot the led turns into a disco ball until power up is gained. When the led turns purple the car have gained rapid fire. A yellow led indicates a shielded car. 
-
-We've added sound to make the game audible with the piezoelectric speaker. It will make a sound when shooting, getting hit, winning and losing. 
-
-Last but not least the vehicle is also equipped with a laser used to aim on other vehicles to make the shooting part of the game more complete and awesome. 
-
-
-
-
-
-
-
-
-
-
-
-
+The RBG leds signals different actions in the game. Green is a sort of default light that indicates that nothing in particular is happening, the car can also be hit when green. The led changes to red when the car is hit. When red the car gets a power boost it can not be hit again until it's green. The blue led indicates shooting.
