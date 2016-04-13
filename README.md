@@ -51,21 +51,23 @@ There is no other trick to it!
 ###RGB-LEDs and PWM
 In order to get more feedback from the game, we added some lights to our project. The DK communicates to these devices with a changing PWM-signal, and you guessed it, this is powered by Nordic Semiconductors app_pwm-library. It should be noted that we've added quite a lot to this library to make it possible to not collide with our other timers, pins and Bluetooth-functionality. 
 
-Right now you can call a simple function, set_rgb_color, to change the light to a set of predefined values. There is also room for defining further values.
+Right now you can call a simple function, `set_rgb_color`, to change the light to a set of predefined values. There is also room for defining further values.
 
 ##Software
 ###Web Bluetooth
-The broadcasted Eddystone URL by the Development Kit directs the user to a website that can connect the device to the car using [Web Bluetooth API] (https://webbluetoothcg.github.io/web-bluetooth/#introduction). This means that any device with a Web Bluetooth enabled browser is able to connect to and control the car. The part of the JavaScript that takes care of the connection with the Development Kit can be found in js/ble.js. 
+The broadcasted Eddystone URL by the Development Kit directs the user to a website that can connect the device to the car using [Web Bluetooth API] (https://webbluetoothcg.github.io/web-bluetooth/#introduction). This means that any device with a Web Bluetooth enabled browser is able to connect to and control the car. The part of the JavaScript that takes care of the connection with the Development Kit can be found in `js/ble.js`. 
 
-We have chosen to use a modified version of the LED Button Service included in the nRF52 SDK 11 as our GATT service in this project, and the website will only show devices advertising this particular service when a user tries to connect to the car via the website. This can easily be changed by replacing the UUIDs for your custom service and characteristic UUIDs in ble.js. 
+We have chosen to use a modified version of the LED Button Service included in the nRF52 SDK 11 as our GATT service in this project, and the website will only show devices advertising this particular service when a user tries to connect to the car via the website. This can easily be changed by replacing the UUIDs for your custom service and characteristic UUIDs in `js/ble.js`. 
 
 Please keep in mind that we have made these controllers for the car and the game as a demonstration of the potential in the new nRF52 Development Kit. Our background is from the hardware side of things, and the JavaScript is far from perfect. Feedback and tips for improvements to the JavaScript are very welcome. We have learned a lot from working with this, and it would be great to learn even more from more experienced people.
 
 ##The Game of Cars
-As part of this demo, we have made a version of laser tag for multiple players. In the game menu there's an option to create a multiplayer game that others can join. When a game session is created, a game PIN is shown on the creator's device and others may enter this on their own device to be included in the same session and play against each other. To keep track of the game status and be able to notify the players when the game is over, the browser will make AJAX requests to php/game.php at the given interval set in the updateInterval property of the game object in game.js file (1 second by default). This is a solution made for testing purposes, and is probably not a very good one.
+As part of this demo, we have made a version of laser tag for multiple players. In the game menu there's an option to create a multiplayer game that others can join. When a game session is created, a game PIN is shown on the creator's device and others may enter this on their own device to be included in the same session and play against each other. To keep track of the game status and be able to notify the players when the game is over, the browser will make AJAX requests to `php/game.php` at the given interval set in the updateInterval property of the game object in game.js file (1 second by default). This is a solution made for testing purposes, and is probably not a very good one. The database setup needed can be found in the same php-file.
 
 The controllers on the website include a joystick to control the car's movements and a button to 'shoot' at the other cars. The vehicles are equipped with IR-transmitters and receivers to simulate hits. The players have a certain amount of lives and loses one when hit. The car is also equipped with a laser used to aim on other vehicles to make the shooting part of the game easier.
 
 The players can gain life when driving the car over a power up plate. In addition the slot gives three other power ups: shield, rapid fire and speed up only for a certain amount of time. When the vehicle uses shield it's protected against hits. With rapid fire the player is able to shoot three times faster than default shooting speed. When speeded up the car's speed increases by approximately 25%. 
 
 The RBG leds signals different actions in the game. Green is a sort of default light that indicates that nothing in particular is happening, the car can also be hit when green. The led changes to red when the car is hit. When red the car gets a power boost it can not be hit again until it's green. The blue led indicates shooting.
+
+A working version of the game can be found and tested [here] (https://jtguggedal.github.io)
